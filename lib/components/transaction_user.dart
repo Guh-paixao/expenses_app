@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import '../transactions.dart';
+import '../models/transactions.dart';
 import 'transaction_form.dart';
 import 'transaction_list.dart';
 
@@ -17,7 +17,17 @@ class _TransactionUserState extends State<TransactionUser> {
     Transactions(
         id: 't1', title: 'Novo tênis', value: 310.76, date: DateTime.now()),
     Transactions(
-        id: 't2', title: 'Conta de Luz', value: 211.30, date: DateTime.now()),
+        id: 't2', title: 'Conta de L2uz', value: 211.30, date: DateTime.now()),
+    Transactions(
+        id: 't2', title: 'Conta de 4Luz', value: 211.30, date: DateTime.now()),
+    Transactions(
+        id: 't2', title: 'Conta de L4uz', value: 211.30, date: DateTime.now()),
+    Transactions(
+        id: 't2', title: 'Conta de L5uz', value: 211.30, date: DateTime.now()),
+    Transactions(
+        id: 't2', title: 'Conta5 de Luz', value: 211.30, date: DateTime.now()),
+    Transactions(
+        id: 't2', title: 'Conta6 de Luz', value: 211.30, date: DateTime.now()),
   ];
 
   _addTransaction(String title, double value) {
@@ -37,8 +47,8 @@ class _TransactionUserState extends State<TransactionUser> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TransactionList(_transactions),
         TransactionForm(_addTransaction),
+        TransactionList(_transactions),
       ],
     );
   }
